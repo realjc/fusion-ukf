@@ -1,4 +1,7 @@
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/minimithi)
+# [🐳](https://mithi.github.io/deep-bluberry) [☕️](https://ko-fi.com/minimithi) [🧧](https://www.paypal.me/minimithi) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/mithi) 
+```
+33Mudy961bUk9zz35p68g9fE3uuHLRduRp
+```
 
 # INTRODUCTION
 This is an unscented Kalman Filter implementation in C++ for fusing lidar and radar sensor measurements.
@@ -95,4 +98,7 @@ const double STD_YAWRATE_NOISE = 0.6; // yaw acceleration in rad/s^2
 ###  And here's an overview of what the instantiated classes are doing
 ![UKF Algorithm Overview 2](https://github.com/mithi/Fusion-UKF-CPP/blob/master/images/FusionUKF_overview_2.png)
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/minimithi)
+# [🐳](https://mithi.github.io/deep-bluberry) [☕️](https://ko-fi.com/minimithi) [🧧](https://www.paypal.me/minimithi) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/mithi) 
+```
+33Mudy961bUk9zz35p68g9fE3uuHLRduRp
+```
