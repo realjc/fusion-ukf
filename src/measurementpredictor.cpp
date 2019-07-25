@@ -14,7 +14,7 @@ void MeasurementPredictor::initialize(const DataPointType sensor_type){
                0, VAR_PHI, 0,
                0, 0, VAR_RHODOT;
 
-  } else if(this->current_type == DataPointType::LIDAR){
+  }else if(this->current_type == DataPointType::LIDAR){
 
     this->nz = NZ_LIDAR;
     this->R = MatrixXd(this->nz, this->nz);
@@ -30,7 +30,7 @@ MatrixXd MeasurementPredictor::compute_sigma_z(const MatrixXd& sigma_x){
 
   for(int c = 0; c < NSIGMA; c++){
 
-    if (this->current_type == DataPointType::RADAR){
+    if(this->current_type == DataPointType::RADAR){
 
       const double px = sigma_x(0, c);
       const double py = sigma_x(1, c);
@@ -48,7 +48,7 @@ MatrixXd MeasurementPredictor::compute_sigma_z(const MatrixXd& sigma_x){
       sigma(1, c) = phi;
       sigma(2, c) = rhodot;
 
-    } else if(this->current_type == DataPointType::LIDAR){
+    }else if(this->current_type == DataPointType::LIDAR){
 
       sigma(0, c) = sigma_x(0, c); //px
       sigma(1, c) = sigma_x(1, c); //py
