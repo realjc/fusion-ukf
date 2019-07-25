@@ -42,7 +42,8 @@ MatrixXd MeasurementPredictor::compute_sigma_z(const MatrixXd& sigma_x){
 
       const double rho = sqrt(px * px + py * py);
       const double phi = atan2(py, px);
-      const double rhodot = (rho > THRESH) ? ((px * vx + py * vy) / rho) : 0.0; // avoid division by zero
+      const double rhodot = (rho > THRESH) ? ((px * vx + py * vy) / rho) : 0.0; 
+      // avoid division by zero
 
       sigma(0, c) = rho;
       sigma(1, c) = phi;
@@ -90,11 +91,15 @@ MatrixXd MeasurementPredictor::compute_S(const MatrixXd& sigma, const MatrixXd& 
 }
 
 void MeasurementPredictor::process(const MatrixXd& sigma_x, const DataPointType sensor_type){
-
-  this->initialize(sensor_type); // let the MeasurementPredictor know whether it's processing a LIDAR or RADAR measurement
-  this->sigma_z = this->compute_sigma_z(sigma_x); // transform predicted sigma_x into measurement space
-  this->z = this->compute_z(this->sigma_z); // get the mean predicted measurement vector z
-  this->S = this->compute_S(this->sigma_z, this->z); // get the measurement covariance matrix S
+  
+  // let the MeasurementPredictor know whether it's processing a LIDAR or RADAR measurement
+  this->initialize(sensor_type); 
+  // transform predicted sigma_x into measurement space
+  this->sigma_z = this->compute_sigma_z(sigma_x);
+  // get the mean predicted measurement vector z
+  this->z = this->compute_z(this->sigma_z); 
+  // get the measurement covariance matrix S
+  this->S = this->compute_S(this->sigma_z, this->z); 
 }
 
 VectorXd MeasurementPredictor::getz() const {
